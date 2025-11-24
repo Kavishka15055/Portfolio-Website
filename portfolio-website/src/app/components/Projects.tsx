@@ -1,0 +1,96 @@
+"use client";
+
+import { projects } from "@/src/contents/projects";
+import React from "react";
+import { PinContainer } from "../ui/3d-pin";
+import { FaGithub, FaLocationArrow } from "react-icons/fa";
+
+const Projects = () => {
+  const handleLinkClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(href, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <section id="projects" className="py-16 md:py-20 lg:py-24 w-full relative z-10 ">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 lg:mb-16 text-center bg-linear-to-br from-white to-gray-400 bg-clip-text text-transparent">
+        Featured Projects
+      </h2>
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
+        {projects.map(
+          ({ id, title, description, image, githubLink, iconLists }) => (
+            
+            <div
+              key={id}
+              className="sm:h-164  lg:min-h-130 h-100 flex items-center justify-center sm:w-96 w-[80vw] "
+            >
+              <PinContainer 
+                title={title} 
+                href={"githubLink"}
+                containerClassName="w-full h-full"
+              >
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                    <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
+                        <img src="/projects/bg-img.webp" alt="bg-img"/>
+                    </div>
+                    <img
+                        src={image}
+                        alt={title}
+                        className="z-10 absolute bottom-0 w-85 h-58 rotate-8 pt-10"
+                        />
+                </div>
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                    {title}
+                </h1>
+                <p className="lg:text-xl  lg:font-normal font-light text-sm line-clamp-2">
+                    {description}
+                </p>
+                <div className="flex items-center justify-between mt-7 mb-3">
+                    <div className=" flex items-center ">
+                        {iconLists.map((icon, index) => (
+                            <div key={icon} className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10  w-8 h-8 flex items-center justify-center shadow-lg"
+                            style={{
+                                transform:`translateX(-${5* index * 2}px)`}}
+                            >
+                                <img 
+                              src={icon} 
+                              alt={`icon-${index}`}
+                              className="w-6 h-6 object-contain"
+                            />
+
+                            </div>
+                        ))}
+                    </div>
+                    {/* GitHub Link */}
+                    <div className="flex justify-center items-center">
+                        <p className="flex lg:text-xl md:text:xs text-sm text-primary">GitHub Repo</p>
+                        <FaGithub className="ms-3"
+                        color="#CBACF9"
+                        />
+                    </div>
+                </div>
+              </PinContainer>
+            </div>
+            
+          )
+        )}
+      </div>
+      
+      {/* View More Button */}
+      <div className="flex justify-center mt-12 sm:mt-16">
+        <button 
+          className="px-8 py-3 bg-linear-to-br from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          onClick={() => {
+            // Add your view all projects logic here
+            console.log('View all projects clicked');
+          }}
+        >
+          View All Projects
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
