@@ -8,9 +8,10 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
-  const theme = "dark"; //Todo : get the theme from context
+  const { theme, toggleTheme, } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const pathname = usePathname();
   const toggleMobileMenu = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
     { href: "/contact", label: "Contact" },
   ];
   return (
-    <nav className="fixed w-full bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700 ">
       <div className="container max-w-7xl mx-auto px-4">
         {/*desktop menu*/}
         <div className="flex items-center justify-between h-16">
@@ -49,7 +50,9 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <button className="p-2 rounded-lg hover:bg-gray-100 text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer">
+            <button
+            onClick={toggleTheme}
+             className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer">
               {theme === "dark" ? (
                 <SunIcon className="h-5 w-5" />
               ) : (
@@ -84,7 +87,9 @@ const Navbar = () => {
                 </div>
               ))}
               <div>
-                <button className="flex items-center py-2 hover:text-primary transition-colors">
+                <button 
+                onClick={toggleTheme}
+                className="flex items-center py-2 hover:text-primary transition-colors">
                   {theme === "dark" ? (
                     <><SunIcon className="h-5 w-5 mr-2" /> Light Mode</>
                   ) : (
