@@ -1,10 +1,12 @@
  export interface Project {
     title: string;
     description:string;
-    technologies: string[];
+    // technologies: string[];
     githubLink: string;
-    demoLink: string;
+    // demoLink: string;
     image:string;
+    id:number;
+    iconLists:string[];
 }
 
 export interface Blog {
