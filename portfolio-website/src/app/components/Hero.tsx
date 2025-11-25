@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Link 
-          href="/projects" 
+          href="#projects" 
           className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/70 transition-colors">
             View Project
           </Link>
