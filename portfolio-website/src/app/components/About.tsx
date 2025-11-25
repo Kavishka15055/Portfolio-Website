@@ -92,7 +92,7 @@ const About = () => {
                 Hello! I'm{" "}
                 <span className="text-primary">Kavishka Piyumal</span>
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-justify">
                 I am a multi-tasking software developer with strong expertise in
                 React and Java. I am driven by a deep passion for software
                 development and a desire to continually learn. I am passionate
