@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import { FaCode, FaGraduationCap, FaLightbulb, FaUsers } from 'react-icons/fa';
 import { SiJavascript, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import Tilt from 'react-parallax-tilt';
 
@@ -47,22 +48,72 @@ const Skills = () => {
         Skills and Technologies
       </h2>
       <div className='flex flex-wrap justify-center gap-6 mt-16'>
-        {skills.map((skil) => {
-          return <Tilt key={skil.name} scale={1.5} transitionSpeed={400}>
-              <div className='bg-[#14134145] dark:bg-blue-950 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition hover:scale-105'>
-                <div className='text-5xl mb-4  dark:text-white'>
-                  {skil.icon}
-                </div>
-                <p className='text-2xl font-semibold'>
-                  {skil.percentage}%
-                </p>
-                <p className='text-primary mt-1'>
-                  {skil.name}
-                </p>
-              </div>
-          </Tilt>
-        })}
-      </div>
+  {skills.map((skil) => {
+    return <Tilt key={skil.name} scale={1.5} transitionSpeed={400}>
+        <div className='bg-[#14134145] dark:bg-blue-950 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition hover:scale-105 hover:z-50 relative'>
+          <div className='text-5xl mb-4 dark:text-white'>
+            {skil.icon}
+          </div>
+          <p className='text-2xl font-semibold'>
+            {skil.percentage}%
+          </p>
+          <p className='text-primary mt-1'>
+            {skil.name}
+          </p>
+        </div>
+    </Tilt>
+  })}
+</div>
+{/* Key Points - Updated Responsive Layout */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-w-6xl mx-auto px-4">
+  <div className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+      <FaCode className="text-primary text-xl" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-lg">Full Stack Developer</h4>
+      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+        Expertise in both frontend and backend technologies
+      </p>
+    </div>
+  </div>
+
+  <div className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+      <FaLightbulb className="text-primary text-xl" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-lg">Quick Learner</h4>
+      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+        Always eager to learn new technologies and methodologies
+      </p>
+    </div>
+  </div>
+
+  <div className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+      <FaUsers className="text-primary text-xl" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-lg">Team Player</h4>
+      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+        Collaborative mindset with strong communication skills
+      </p>
+    </div>
+  </div>
+
+  <div className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+      <FaGraduationCap className="text-primary text-xl" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-lg">Problem Solver</h4>
+      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+        Passionate about solving complex technical challenges
+      </p>
+    </div>
+  </div>
+</div>
     </section>
   )
 }
