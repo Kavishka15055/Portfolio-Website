@@ -17,7 +17,7 @@ const Projects = () => {
       id="projects"
       className="py-16 md:py-20 lg:py-24 w-full relative z-10 "
     >
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 lg:mb-16 text-center bg-linear-to-br from-white to-gray-400 bg-clip-text text-transparent">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 lg:mb-16 text-center bg-linear-to-br  bg-clip-text ">
         Featured Projects
       </h2>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
