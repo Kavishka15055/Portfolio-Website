@@ -2,46 +2,130 @@
 import React from "react";
 import { FaCode, FaGraduationCap, FaLightbulb, FaUsers } from "react-icons/fa";
 import {
+  SiAdobephotoshop,
+  SiAjv,
+  SiCss3,
+  SiExpress,
+  SiFigma,
+  SiFirebase,
+  SiGithub,
+  SiHtml5,
   SiJavascript,
+  SiMongodb,
+  SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPhp,
+  SiPython,
   SiReact,
+  SiSelenium,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 import Tilt from "react-parallax-tilt";
 import { Button } from "../ui/moving-border";
+import { DiJava } from "react-icons/di";
 
 const skills = [
   {
     name: "Javascript",
     icon: <SiJavascript />,
-    percentage: 89,
+    
   },
   {
     name: "React.Js",
     icon: <SiReact />,
-    percentage: 92,
+    
   },
   {
     name: "Next.js",
     icon: <SiNextdotjs />,
-    percentage: 90,
+    
   },
   {
     name: "Node.js",
     icon: <SiNodedotjs />,
-    percentage: 88,
+    
   },
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss />,
-    percentage: 94,
+    
   },
   {
     name: "TypeScript",
     icon: <SiTypescript />,
-    percentage: 75,
+    
+  },
+  {
+    name: "Python",
+    icon: <SiPython />,
+    
+  },
+  {
+    name: "PHP",
+    icon: <SiPhp />,
+    
+  },
+  {
+    name: "Java",
+    icon: <DiJava />,
+    
+  },
+  {
+    name: "Express.js",
+    icon: <SiExpress />,
+    
+  },
+  {
+    name: "Selenium",
+    icon: <SiSelenium />,
+    
+  },
+  {
+    name: "HTML",
+    icon: <SiHtml5 />,
+    
+  },
+  {
+    name: "CSS",
+    icon: <SiCss3 />,
+    
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss />,
+    
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql />,
+    
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase />,
+    
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma />,
+    
+  },
+  {
+    name: "Photoshop",
+    icon: <SiAdobephotoshop />,
+    
+  },
+  {
+    name: "GitHub",
+    icon: <SiGithub />,
+    
   },
 ];
 
@@ -58,9 +142,9 @@ const Skills = () => {
         {skills.map((skil) => {
           return (
             <Tilt key={skil.name} scale={1.5} transitionSpeed={400}>
-              <div className="bg-[#14134145] dark:bg-blue-950 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition hover:scale-105 hover:z-50 relative">
+              <div className="bg-[#14134145] dark:bg-blue-950 text-center w-24 sm:w-24 md:w-25 lg:w-30 h-32 sm:h-32 md:h-33 lg:h-38 rounded-3xl flex flex-col items-center justify-center shadow-lg transition hover:scale-105 hover:z-50 relative">
                 <div className="text-5xl mb-4 dark:text-white">{skil.icon}</div>
-                <p className="text-2xl font-semibold">{skil.percentage}%</p>
+                
                 <p className="text-primary mt-1">{skil.name}</p>
               </div>
             </Tilt>

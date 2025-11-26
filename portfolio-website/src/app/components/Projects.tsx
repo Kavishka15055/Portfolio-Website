@@ -29,7 +29,7 @@ const Projects = () => {
             >
               <PinContainer
                 title={title}
-                href={"githubLink"}
+                href={githubLink}
                 containerClassName="w-full h-full"
               >
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
@@ -42,10 +42,10 @@ const Projects = () => {
                     className="z-10 absolute bottom-0 w-85 h-58 rotate-8 pt-10"
                   />
                 </div>
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                <h1 className="font-bold lg:text-2xl md:text-xs text-base line-clamp-1">
                   {title}
                 </h1>
-                <p className="lg:text-xl  lg:font-normal font-light text-sm line-clamp-2">
+                <p className="lg:text-xs  lg:font-normal font-light text-sm line-clamp-2  h-15">
                   {description}
                 </p>
                 <div className="flex items-center justify-between mt-7 mb-3">
@@ -70,11 +70,11 @@ const Projects = () => {
                   {/* GitHub Link - Only text clickable */}
                   <div className="flex justify-center items-center">
                     <button
-                      className="flex items-center lg:text-xl md:text-xs text-sm text-purple-200 hover:text-purple-100 transition-colors cursor-pointer bg-transparent border-none"
+                      className="flex items-center lg:text-xl md:text-xs text-sm text-primary hover:text-black dark:hover:text-purple-100 transition-colors cursor-pointer bg-transparent border-none"
                       onClick={(e) => handleLinkClick(e, githubLink)}
                     >
-                      GitHub Repo
-                      <FaGithub className="ms-3" color="#CBACF9" />
+                      GitHub
+                      <FaGithub className="ms-2 hover:text-purple-100" color="" />
                     </button>
                   </div>
                 </div>
