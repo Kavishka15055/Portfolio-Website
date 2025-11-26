@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "motion/react";
 import { LampContainer } from "../ui/lamp";
+import Blob from "../ui/Blob";
 
 const About = () => {
   const education = [
@@ -66,45 +67,50 @@ const About = () => {
         </h2>
 
         {/* Main Content Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Image Section */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-primary shadow-2xl">
-                <Image
-                  src="/profile.avif"
-                  alt="Kavishka Piyumal"
-                  width={320}
-                  height={320}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-2xl -z-10"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-purple-500 rounded-xl -z-10"></div>
-            </div>
-          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 ">
+  {/* Image Section with Blob Background */}
+  <div className="flex justify-center lg:justify-start ">
+    <div className="relative">
+      {/* Blob Background */}
+      <div className="absolute inset-0 -z-10">
+       <Blob containerStyles="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] md:w-[520px] md:h-[520px] lg:w-[530px] lg:h-[530px] opacity-100"/>
+      </div>
+      
+      {/* Profile Image */}
+      <div className="relative z-10  overflow-hidden ">
+        <Image
+          src="/profile.png"
+          alt="Kavishka Piyumal"
+          width={420}
+          height={420}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+    </div>
+  </div>
 
-          {/* Content Section */}
-          <div className="space-y-8">
-            {/* Introduction */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
-                Hello! I'm{" "}
-                <span className="text-primary">Kavishka Piyumal</span>
-              </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-justify">
-                I am a multi-tasking software developer with strong expertise in
-                React and Java. I am driven by a deep passion for software
-                development and a desire to continually learn. I am passionate
-                about solving complex problems and am eager to contribute to the
-                success of a team by coming up with new ideas and utilizing my
-                collaborative skills. My goal is to apply my technical expertise
-                and collaborative skills to create meaningful solutions while
-                further developing my knowledge and capabilities in the field.
-              </p>
-            </div>
-          </div>
-        </div>
+  {/* Content Section */}
+  <div className="space-y-8">
+    {/* Introduction */}
+    <div>
+      <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
+        Hello! I'm{" "}
+        <span className="text-primary">Kavishka Piyumal</span>
+      </h3>
+      <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-justify">
+        I am a multi-tasking software developer with strong expertise in
+        React and Java. I am driven by a deep passion for software
+        development and a desire to continually learn. I am passionate
+        about solving complex problems and am eager to contribute to the
+        success of a team by coming up with new ideas and utilizing my
+        collaborative skills. My goal is to apply my technical expertise
+        and collaborative skills to create meaningful solutions while
+        further developing my knowledge and capabilities in the field.
+      </p>
+    </div>
+  </div>
+</div>
 
         {/* Education and Work Experience Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16 border-cyan-500/20">

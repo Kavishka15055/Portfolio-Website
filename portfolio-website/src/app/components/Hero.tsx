@@ -5,11 +5,14 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+import DarkVeil from "../ui/DarkVeil";
 
 const Hero = () => {
   return (
-    <section className="py-28 container max-w-7xl mx-auto px-4">
-      <div className="max-w-3xl mx-auto text-center">
+    <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+      <DarkVeil>
+    <section className="px-2 sm:px-1 md:px-1.5 lg:px-2 pt-20 sm:pt-15 md:pt-18 lg:pt-20 ">
+      <div className="max-w-3xl mx-auto text-center ">
         <div className="flex flex-col items-center mb-4">
           <Image
             src="/profile.avif"
@@ -81,6 +84,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </DarkVeil>
+    </div>
   );
 };
 
