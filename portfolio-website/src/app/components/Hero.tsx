@@ -61,18 +61,18 @@ const Hero = () => {
           >
             <FaLinkedin />
           </Link>
-          <Link
+          {/* <Link
             href="/"
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition duration-300"
           >
             <FaTwitter />
-          </Link>
+          </Link> */}
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Link 
           href="#projects" 
           className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/70 transition-colors">
-            View Project
+            View Projects
           </Link>
 
 
