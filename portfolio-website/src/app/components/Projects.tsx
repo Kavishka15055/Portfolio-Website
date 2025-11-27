@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-2 md:py-4 lg:py-14 w-full relative z-10  "
+      className="pt-15 w-full relative z-10  "
     >
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 lg:mb-3 text-center bg-linear-to-br bg-clip-text py-1 sm:py-2 lg:py-3 ">
   Featured Projects

@@ -32,7 +32,7 @@ export const projects: Project[] = [
         // technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
         githubLink: 'https://github.com/NavinduR2001/hand-sign-recognize-mobile-app',
         // demoLink: 'https://demo.com',
-        image: '/projects/portfolio-website.jpg',
+        image: '/projects/waveword.png',
         iconLists: ["/projects/reactnative.png", "/projects/python.png", "/projects/firebase.png","/projects/webrtc.png","/projects/tensorflow.png","/projects/OpenCV.png",],
       },
       {
@@ -52,17 +52,8 @@ export const projects: Project[] = [
         // technologies: ['React', 'OpenWeatherMap API'],
         githubLink: 'https://github.com',
         // demoLink: 'https://demo.com',
-        image: '/projects/weather-app.png',
+        image: '/projects/portfolio.jpg',
         iconLists: ["/projects/Nextjs.png", "/projects/tailwind.png", "/projects/ts.png", "/projects/framer-motion.svg"],
-      },{
-        id:6,
-        title: 'Chat Application',
-        description: 'A real-time chat application using WebSocket technology.',
-        // technologies: ['React', 'Node.js', 'Socket.io'],
-        githubLink: 'https://github.com',
-        // demoLink: 'https://demo.com',
-        image: '/projects/chat-app.png',
-        iconLists: ["/projects/re.svg", "/projects/tail.svg", "/ts.svg"],
       },
       
   ];

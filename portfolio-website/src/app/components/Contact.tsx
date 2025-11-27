@@ -60,11 +60,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 md:py-20 lg:py-24 w-full relative z-10  "
+      className="py-15 w-full relative z-10  "
     >
       <div className="container max-w-7xl mx-auto py-12">
         <motion.h1
-          className="text-4xl font-bold mb-8 text-center"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-center"
           {...fadeInUp}
         >
           Contact Me
